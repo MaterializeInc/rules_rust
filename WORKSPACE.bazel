@@ -45,6 +45,10 @@ load("@rules_rust//bindgen:transitive_repositories.bzl", "rust_bindgen_transitiv
 
 rust_bindgen_transitive_dependencies()
 
+load("@rules_rust//cargo:deps.bzl", "cargo_dependencies")
+
+cargo_dependencies()
+
 load("@rules_rust//tools/rust_analyzer:deps.bzl", "rust_analyzer_dependencies")
 
 rust_analyzer_dependencies()
